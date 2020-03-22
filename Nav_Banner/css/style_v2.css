@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /*================================================================
 Default Styles
 ================================================================*/
 body {
-  font-family: "Noto Sans TC", sans-serif, "微軟正黑體";
+  font-family: "Noto Serif TC", serif;
   color: black;
-  background-color: cornsilk;
+  background-color: white;
   margin: 0;
 }
 
@@ -290,7 +289,8 @@ Navbar
   PARALLAX
   ================================================================*/
 .banner {
-  background-color: cornsilk;
+  background-color: white;
+  margin-top: 30px;
 }
 
 .banner .wrapper {
@@ -300,54 +300,93 @@ Navbar
   margin-right: auto;
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: 999;
   background-image: url("../img/banner/banner-image.jpg");
   background-position: top;
+  background-size: cover;
 }
 
-.banner .wrapper .banner-top {
+.banner .wrapper .logo-box {
+  width: 36%;
   position: absolute;
-  width: 30%;
-  left: 0;
+  top: 40vh;
+  left: 32vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.banner .wrapper .banner-right {
-  position: absolute;
-  width: 30%;
-  right: 0.5%;
-  top: 0;
-}
-
-.banner .wrapper .running-button {
-  position: absolute;
-  left: 42%;
-  bottom: 8%;
-}
-
-@media (max-width: 960px) {
-  .banner .wrapper .running-button {
-    width: 20%;
+@media (max-width: 880px) {
+  .banner .wrapper .logo-box {
+    width: 40%;
     position: absolute;
-    left: 40%;
-  }
-  .banner .wrapper .running-button span {
-    font-size: 1rem;
+    left: 30vw;
   }
 }
 
 @media (max-width: 767px) {
-  .banner .wrapper .running-button {
-    width: 30%;
+  .banner .wrapper .logo-box {
+    width: 48%;
     position: absolute;
-    left: 35%;
+    left: 26vw;
   }
 }
 
 @media (max-width: 576px) {
-  .banner .wrapper .running-button {
-    width: 40%;
+  .banner .wrapper .logo-box {
+    width: 70%;
     position: absolute;
-    left: 30%;
+    left: 15vw;
+  }
+}
+
+@media (max-width: 321px) {
+  .banner .wrapper .logo-box {
+    width: 80%;
+    position: absolute;
+    left: 10vw;
+  }
+}
+
+.banner .wrapper .logo-box h1 {
+  color: black;
+  font-weight: 1000;
+  font-size: 6rem;
+  z-index: 99;
+}
+
+@media (max-width: 1140px) {
+  .banner .wrapper .logo-box h1 {
+    font-size: 4rem;
+  }
+}
+
+.banner .wrapper .logo-box span {
+  margin-top: 3%;
+  font-size: 2rem;
+  color: white;
+  z-index: 98;
+}
+
+@media (max-width: 1140px) {
+  .banner .wrapper .logo-box span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner .wrapper .logo-box span {
+    font-size: 1.5rem;
   }
 }
 
@@ -373,114 +412,6 @@ li.layer a {
 
 /* li.layer:nth-child(1) {} 1 item */
 /*-----Logotype----------------*/
-li.layer:nth-child(1) .logo-box {
-  width: 36%;
-  position: absolute;
-  top: 28vh;
-  left: 32vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media (max-width: 880px) {
-  li.layer:nth-child(1) .logo-box {
-    width: 40%;
-    position: absolute;
-    left: 30vw;
-  }
-}
-
-@media (max-width: 767px) {
-  li.layer:nth-child(1) .logo-box {
-    width: 48%;
-    position: absolute;
-    left: 26vw;
-  }
-}
-
-@media (max-width: 576px) {
-  li.layer:nth-child(1) .logo-box {
-    width: 70%;
-    position: absolute;
-    left: 15vw;
-  }
-}
-
-@media (max-width: 321px) {
-  li.layer:nth-child(1) .logo-box {
-    width: 80%;
-    position: absolute;
-    left: 10vw;
-  }
-}
-
-li.layer:nth-child(1) .logo-box .logo-back {
-  width: 100%;
-  position: absolute;
-}
-
-li.layer:nth-child(1) .logo-box .logo {
-  width: 50%;
-  z-index: 99;
-}
-
-@media (max-width: 960px) {
-  li.layer:nth-child(1) .logo-box .logo {
-    width: 40%;
-  }
-}
-
-@media (max-width: 576px) {
-  li.layer:nth-child(1) .logo-box .logo {
-    width: 40%;
-  }
-}
-
-li.layer:nth-child(1) .logo-box span {
-  color: black;
-  margin-top: 5%;
-  font-size: 1.5rem;
-  z-index: 98;
-}
-
-@media (max-width: 1140px) {
-  li.layer:nth-child(1) .logo-box span {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 960px) {
-  li.layer:nth-child(1) .logo-box span {
-    width: 40%;
-  }
-}
-
-@media (max-width: 880px) {
-  li.layer:nth-child(1) .logo-box span {
-    width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  li.layer:nth-child(1) .logo-box span {
-    width: 55%;
-    font-size: 1rem;
-  }
-}
-
 li.layer:nth-child(2) a {
   font-size: 3.5vw;
   color: black;
@@ -502,10 +433,10 @@ li.layer:nth-child(2) a:hover {
 
 /*-----0----------------------*/
 li.layer:nth-child(3) a {
-  font-size: 5vw;
+  width: 15%;
   position: absolute;
-  top: 20vh;
-  left: 4vw;
+  top: 5vh;
+  left: 20vw;
 }
 
 /*-----1---------------------*/
@@ -513,7 +444,7 @@ li.layer:nth-child(4) a {
   width: 50%;
   position: absolute;
   top: 35vh;
-  left: 1vw;
+  left: 3vw;
 }
 
 /*-----2---------------------*/
@@ -542,11 +473,11 @@ li.layer:nth-child(7) a {
 
 /*-----5---------------------*/
 li.layer:nth-child(8) a {
-  width: 40%;
+  width: 35%;
   font-size: 3.5vw;
   position: absolute;
   top: 8vh;
-  left: 60vw;
+  left: 65vw;
 }
 
 @media (max-width: 576px) {
